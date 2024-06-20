@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('../assets//styles/font2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  body {
+    font-family: 'MyCustomFont', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+  }
+  
