@@ -15,15 +15,31 @@ function LandingPage() {
         setPosition({ x: event.clientX, y: event.clientY });
     };
 
+    const scrollToRef = (ref) => {
+        ref.current.scrollIntoView({ behavior: 'smooth' });
+    };
+
+    const aboutMeRef = React.useRef(null);
+    const skillsRef = React.useRef(null);
+    const projectsRef = React.useRef(null);
+
     return (
         <div onMouseMove={handleMouseMove}>
-            <NavbarComponent />
-            <div className="mt-20">
+            <NavbarComponent
+                scrollToAboutMe={() => scrollToRef(aboutMeRef)}
+                scrollToSkills={() => scrollToRef(skillsRef)}
+                scrollToProjects={() => scrollToRef(projectsRef)}
+            />
+            <div className="mt-20" ref={aboutMeRef}>
                 <HeroComponent />
                 <HeroComponent2 />
-                <AboutMeComponent/>
-                <SkilsComponent/>
-                <ProjectsComponents/>
+                <AboutMeComponent />
+            </div>
+            <div ref={skillsRef}>
+                <SkilsComponent />
+            </div>
+            <div ref={projectsRef}>
+                <ProjectsComponents />
             </div>
             {/* <div className="custom-cursor" style={{ left: `${position.x}px`, top: `${position.y}px` }}></div> */}
         </div>

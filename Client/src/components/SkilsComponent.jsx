@@ -1,19 +1,21 @@
 import React, { useState } from 'react';
-import image1 from '../assets/images/Samples/img_1.jpg';
-import image2 from '../assets/images/Samples/img_2.jpg';
-import image3 from '../assets/images/Samples/img_3.jpg';
-import image4 from '../assets/images/Samples/img_4.jpg';
-import image5 from '../assets/images/Samples/img_5.jpg';
-import image6 from '../assets/images/Samples/img_6.jpg';
-import image7 from '../assets/images/Samples/img_7.jpg';
+import image1 from '../assets/images/Samples/image-J.png';
+import image2 from '../assets/images/Samples/image-I.png';
+import image3 from '../assets/images/Samples/image-Q.png';
+import image4 from '../assets/images/Samples/image-L.png';
+import image5 from '../assets/images/Samples/image-F.png';
+import image6 from '../assets/images/Samples/image-K.png';
+import image7 from '../assets/images/Samples/image-P.png';
+import image8 from '../assets/images/Samples/image-N.png';
 
 const images = [
-  { src: image1, title: "Web Development", skills: "React, Angular" },
-  { src: image2, title: "Mobile Development", skills: "React Native, Flutter" },
-  { src: image3, title: "Backend Development", skills: "Node.js, Django" },
-  { src: image4, title: "DevOps", skills: "Docker, Kubernetes" },
+  { src: image1, title: "Web Development", skills: "MERN Stack, Vite js, Vue js, ASP.Net" },
+  { src: image2, title: "Mobile Development", skills: "Native java, React Native, Flutter, Augmented Reality" },
+  { src: image3, title: "Backend Development", skills: "Node.js, Flask , Restful API" },
+  { src: image8, title: "Programming Languages", skills: "Javascript, Typescript, Java, C#, python" },
+  { src: image4, title: "DevOps", skills: "Docker" },
   { src: image5, title: "UI/UX Design", skills: "Figma, Sketch" },
-  { src: image6, title: "Data Science", skills: "Python, R" },
+  { src: image6, title: "Database", skills: "SQL, MongoDB, Firebase" },
   { src: image7, title: "Cloud Computing", skills: "AWS, Azure" },
 ];
 
@@ -70,9 +72,9 @@ const Carousel = () => {
   };
 
   return (
-    <diV class='mb-20'>
+    <div className='mb-20'>
       <div>
-        <p className='text-6xl font-bold text-center'>Skils</p>
+        <p className='text-6xl font-bold text-center'>Skills</p>
       </div>
       <div>
         <div
@@ -85,20 +87,20 @@ const Carousel = () => {
             <button onClick={prevSlide} className="absolute left-0 z-10 bg-gray-800 text-white p-2 rounded-full">
               &#10094;
             </button>
-            <div className="relative flex w-full h-96 items-center justify-center">
+            <div className="relative flex w-full h-96 md:h-108 items-center justify-center">
               {images.map((image, index) => (
                 <div
                   key={index}
-                  className="absolute w-72 h-72 md:w-80 md:h-80 bg-white shadow-lg rounded-lg transition-transform duration-500 p-6"
+                  className="absolute w-80 h-80 md:w-96 md:h-96 bg-zinc-100 shadow-lg rounded-lg transition-transform duration-500 p-6"
                   style={getTransform(index)}
                 >
                   <img
                     src={image.src}
                     alt={`Slide ${index}`}
-                    className="w-full h-40 md:h-48 object-cover rounded-md"
+                    className="w-full h-30 md:h-48 object-cover rounded-md"
                   />
-                  <h2 className="mt-4 text-xl md:text-2xl font-semibold">{image.title}</h2>
-                  <p className="mt-2 text-gray-600 text-sm md:text-base">{image.skills}</p>
+                  <h2 className="mt-4 text-2xl text-center md:text-2xl font-semibold">{image.title}</h2>
+                  <p className="mt-2 text-tahiti text-md md:text-base">{image.skills}</p>
                 </div>
               ))}
             </div>
@@ -116,7 +118,7 @@ const Carousel = () => {
           </div>
         </div>
       </div>
-    </diV>
+    </div>
   );
 };
 
