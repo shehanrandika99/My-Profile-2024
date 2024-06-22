@@ -72,13 +72,13 @@ const Carousel = () => {
   };
 
   return (
-    <div className='mb-20'>
+    <div className='mb-20  '>
       <div>
         <p className='text-6xl font-bold text-center'>Skills</p>
       </div>
-      <div>
+      <div className=' ' height={300}>
         <div
-          className="relative w-full max-w-6xl mx-auto mt-8"
+          className="relative w-full max-w-6xl mx-auto mt-8 "
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
@@ -91,7 +91,7 @@ const Carousel = () => {
               {images.map((image, index) => (
                 <div
                   key={index}
-                  className="absolute w-80 h-80 md:w-96 md:h-96 bg-zinc-100 shadow-lg rounded-lg transition-transform duration-500 p-6"
+                  className="absolute w-80 h-80 md:w-96 md:h-96 bg-white shadow-lg rounded-lg transition-transform duration-500 p-6"
                   style={getTransform(index)}
                 >
                   <img

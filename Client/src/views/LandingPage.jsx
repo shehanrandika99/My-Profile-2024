@@ -7,6 +7,9 @@ import '../styles/Cursor.css'; // Import the CSS file for cursor styling
 import AboutMeComponent from '../components/AboutMeComponent';
 import SkilsComponent from '../components/SkilsComponent';
 import ProjectsComponents from '../components/ProjectsComponents';
+import ContactMeComponent from '../components/ContactMeComponent';
+import EducationComponent from '../components/EducationComponent';
+import ExperiencesComponent from '../components/ExperiencesComponent';
 
 function LandingPage() {
     const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -22,13 +25,19 @@ function LandingPage() {
     const aboutMeRef = React.useRef(null);
     const skillsRef = React.useRef(null);
     const projectsRef = React.useRef(null);
+    const contactmeRef = React.useRef(null);
+    const educationRef = React.useRef(null);
+    const experienceRef = React.useRef(null);
 
     return (
-        <div onMouseMove={handleMouseMove}>
+        <div onMouseMove={handleMouseMove} className='bg-gradient-to-r from-[#ffffff] via-[#e4efde] to-[#fff]' >
             <NavbarComponent
                 scrollToAboutMe={() => scrollToRef(aboutMeRef)}
                 scrollToSkills={() => scrollToRef(skillsRef)}
                 scrollToProjects={() => scrollToRef(projectsRef)}
+                scrollToContactMe={() => scrollToRef(contactmeRef)}
+                scrollToEducation={() => scrollToRef(educationRef)}
+                scrollToExperience={() => scrollToRef(experienceRef)}
             />
             <div className="mt-20" ref={aboutMeRef}>
                 <HeroComponent />
@@ -42,6 +51,16 @@ function LandingPage() {
                 <ProjectsComponents />
             </div>
             {/* <div className="custom-cursor" style={{ left: `${position.x}px`, top: `${position.y}px` }}></div> */}
+  
+            <div ref={educationRef}>
+                <EducationComponent/>
+            </div>
+            <div ref={experienceRef}>
+                <ExperiencesComponent/>
+            </div>
+            <div ref={contactmeRef}>
+                <ContactMeComponent/>
+            </div>
         </div>
     );
 }

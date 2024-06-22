@@ -15,7 +15,7 @@ function HeroComponent2() {
     };
 
     return (
-        <div style={{ display: 'flex', justifyContent: 'space-around', flexDirection: 'row', alignItems: 'center', flexWrap: 'wrap' }} className='bg-black'>
+        <div style={{ display: 'flex', justifyContent: 'space-around', flexDirection: 'row', alignItems: 'center', flexWrap: 'wrap' }} className='bg-gradient-to-r from-black via-gray-600 to-black'>
             <div style={{ flex: '1', minWidth: '200px', maxWidth: '300px', margin: '10px', textAlign: 'center', color:'#FFFF' }} >
                 <Lottie options={{ ...defaultOptions, animationData: animationData1 }} height={200} width={200} />
                 <p className="text-4xl font-bold ">Projects</p>
