@@ -13,7 +13,7 @@ function AboutMeComponent() {
           <div className="flex-shrink-0 mb-4 md:mb-0 md:mr-4">
             <img src={Image3} alt="Profile" className="h-auto w-80 md:w-60 lg:w-80" />
           </div>
-          <div className="text-justify md:text-left md:max-w-xl">
+          <div className="text-justify md:text-left md:max-w-4xl ml-5">
             <p className='text-lg text-justify' >
               I am a passionate and dedicated developer with a strong focus on creating meaningful and engaging web and mobile applications. My goal is to leverage technology to solve real-world problems and make a positive impact on people's lives. Currently, I am in my final year of pursuing a BSc in Software Engineering at Plymouth University, UK, through NSBM Green University. I have completed an internship as an R&D Software Engineer, where I gained valuable experience working on ASP.NET sites, machine learning projects, and mobile applications. My expertise spans across React, Android (Java), and React Native, allowing me to build robust and user-centric applications.
             </p>
