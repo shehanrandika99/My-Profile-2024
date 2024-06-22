@@ -6,7 +6,7 @@ function AboutMeComponent() {
   return (
     <div className="p-4 font-custom">
       <div>
-        <p className='text-6xl font-bold my-2 text-center'>About Me</p>
+        <p className='text-6xl font-extrabold my-2 text-center font-custom'>About Me</p>
       </div>
       <div>
         <div className="flex flex-col md:flex-row items-center md:items-start md:justify-center p-4 mt-12">

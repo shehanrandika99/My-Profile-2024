@@ -15,10 +15,10 @@ function HeroComponent2() {
     };
 
     return (
-        <div style={{ display: 'flex', justifyContent: 'space-around', flexDirection: 'row', alignItems: 'center', flexWrap: 'wrap' }}>
-            <div style={{ flex: '1', minWidth: '200px', maxWidth: '300px', margin: '10px', textAlign: 'center' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-around', flexDirection: 'row', alignItems: 'center', flexWrap: 'wrap' }} className='bg-black'>
+            <div style={{ flex: '1', minWidth: '200px', maxWidth: '300px', margin: '10px', textAlign: 'center', color:'#FFFF' }} >
                 <Lottie options={{ ...defaultOptions, animationData: animationData1 }} height={200} width={200} />
-                <p className="text-4xl font-bold">Projects</p>
+                <p className="text-4xl font-bold ">Projects</p>
                 <div className="text-4xl font-bold mt-2">
                     <CountUp
                         start={1}
@@ -40,7 +40,7 @@ function HeroComponent2() {
                     </CountUp>
                 </div>
             </div>
-            <div style={{ flex: '1', minWidth: '200px', maxWidth: '300px', margin: '10px', textAlign: 'center' }}>
+            <div style={{ flex: '1', minWidth: '200px', maxWidth: '300px', margin: '10px', textAlign: 'center', color:'#FFFF' }}>
                 <Lottie options={{ ...defaultOptions, animationData: animationData2 }} height={200} width={200} />
                 <p className="text-4xl font-bold">Hackthons</p>
                 <div className="text-4xl font-bold mt-2">
@@ -65,7 +65,7 @@ function HeroComponent2() {
                 </div>
 
             </div>
-            <div style={{ flex: '1', minWidth: '200px', maxWidth: '300px', margin: '10px', textAlign: 'center' }}>
+            <div style={{ flex: '1', minWidth: '200px', maxWidth: '300px', margin: '10px', textAlign: 'center',color:'#FFFF' }}>
                 <Lottie options={{ ...defaultOptions, animationData: animationData3 }} height={200} width={200} />
                 <p className="text-4xl font-bold">Certificates</p>
                 <div className="text-4xl font-bold mt-2">
