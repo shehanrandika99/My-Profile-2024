@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import NavbarComponent from '../components/NavbarComponent';
+import HomePage from './HomePage';
 import HeroComponent from '../components/HeroComponent';
 import HeroComponent2 from '../components/HeroComponent2';
 import '../styles/Cursor.css'; // Import the CSS file for cursor styling
@@ -31,10 +32,7 @@ function LandingPage() {
     const footerRef = React.useRef(null);
 
     return (
-        <div 
-            onMouseMove={handleMouseMove} 
-            className="bg-gradient-to-r from-[#ffffff] via-[#e4efde] to-[#fff] animate-gradient-xy min-h-screen"
-        >
+        <div onMouseMove={handleMouseMove} className='bg-gradient-to-r from-[#ffffff] via-[#e4efde] to-[#fff]' >
             <NavbarComponent
                 scrollToAboutMe={() => scrollToRef(aboutMeRef)}
                 scrollToSkills={() => scrollToRef(skillsRef)}
@@ -42,7 +40,7 @@ function LandingPage() {
                 scrollToContactMe={() => scrollToRef(contactmeRef)}
                 scrollToEducation={() => scrollToRef(educationRef)}
                 scrollToExperience={() => scrollToRef(experienceRef)}
-                scrollToFooter={() => scrollToRef(footerRef)}
+                scrollToFooter={()=> scrollToRef(footerRef)}
             />
             <div className="mt-20" ref={aboutMeRef}>
                 <HeroComponent />
@@ -58,16 +56,16 @@ function LandingPage() {
             {/* <div className="custom-cursor" style={{ left: `${position.x}px`, top: `${position.y}px` }}></div> */}
   
             <div ref={educationRef}>
-                <EducationComponent />
+                <EducationComponent/>
             </div>
             <div ref={experienceRef}>
-                <ExperiencesComponent />
+                <ExperiencesComponent/>
             </div>
             <div ref={contactmeRef}>
-                <ContactMeComponent />
+                <ContactMeComponent/>
             </div>
             <div ref={footerRef}>
-                <FooterComponent />
+                <FooterComponent/>
             </div>
         </div>
     );
