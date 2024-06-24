@@ -4,6 +4,7 @@ import ProfileImage from '../assets/images/image-2.png';
 import HeroComponent2 from './HeroComponent2';
 import Lottie from 'react-lottie'; // Import the Lottie component
 import animationData4 from '../lottieAnimations/Animation - 5.json';
+import Button from './Button';
 
 function HeroComponent() {
     const defaultOptions = {
@@ -34,7 +35,8 @@ function HeroComponent() {
                 style={{ fontSize: '2em', display: 'inline-block', marginTop: '16px' }}
                 repeat={Infinity}
             />
-            <div style={{ display: 'flex', justifyContent: 'space-around', marginTop: '16px' }}>
+            <Button />
+            <div style={{ display: 'flex', justifyContent: 'space-around' }}>
                 <Lottie options={defaultOptions} height={100} width={100} />
             </div>
         </div>

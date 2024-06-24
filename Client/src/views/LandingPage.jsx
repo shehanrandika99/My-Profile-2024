@@ -20,7 +20,7 @@ function LandingPage() {
     };
 
     const scrollToRef = (ref) => {
-        ref.current.scrollIntoView({ behavior: 'smooth' });
+        ref.current.scrollIntoView({ behavior: 'scrollIntoView' });
     };
 
     const aboutMeRef = React.useRef(null);
