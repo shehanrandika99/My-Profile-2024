@@ -10,6 +10,7 @@ import ProjectsComponents from '../components/ProjectsComponents';
 import ContactMeComponent from '../components/ContactMeComponent';
 import EducationComponent from '../components/EducationComponent';
 import ExperiencesComponent from '../components/ExperiencesComponent';
+import FooterComponent from '../components/FooterComponent';
 
 function LandingPage() {
     const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -28,6 +29,7 @@ function LandingPage() {
     const contactmeRef = React.useRef(null);
     const educationRef = React.useRef(null);
     const experienceRef = React.useRef(null);
+    const footerRef = React.useRef(null);
 
     return (
         <div onMouseMove={handleMouseMove} className='bg-gradient-to-r from-[#ffffff] via-[#e4efde] to-[#fff]' >
@@ -38,6 +40,7 @@ function LandingPage() {
                 scrollToContactMe={() => scrollToRef(contactmeRef)}
                 scrollToEducation={() => scrollToRef(educationRef)}
                 scrollToExperience={() => scrollToRef(experienceRef)}
+                scrollToFooter={()=> scrollToRef(footerRef)}
             />
             <div className="mt-20" ref={aboutMeRef}>
                 <HeroComponent />
@@ -60,6 +63,9 @@ function LandingPage() {
             </div>
             <div ref={contactmeRef}>
                 <ContactMeComponent/>
+            </div>
+            <div ref={footerRef}>
+                <FooterComponent/>
             </div>
         </div>
     );
