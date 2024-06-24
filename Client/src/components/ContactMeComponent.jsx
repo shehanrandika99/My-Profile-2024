@@ -1,10 +1,11 @@
 import React from 'react'
-
+import emailjs from '@emailjs/browser';
+import EmailFormComponent from './EmailFormComponent';
 function ContactMeComponent() {
   return (
     <div className=''>
       <div >
-        <p className='text-6xl text-[#000] font-bold text-center mt-20'>Contact Me</p>
+        <p className='text-6xl text-[#000] font-bold text-center mt-20 mb-20'>Contact Me</p>
       </div>
       <div><div class="grid sm:grid-cols-2 items-start gap-16 p-4 mx-auto max-w-4xl bg-white font-[sans-serif] rounded-md ">
         <div>
@@ -69,18 +70,7 @@ function ContactMeComponent() {
           </div>
         </div>
 
-        <form class="ml-auto space-y-4">
-          <input type='text' placeholder='Name'
-            class="w-full rounded-md py-3 px-4 bg-gray-100 text-gray-800 text-sm outline--50blue0 focus:bg-transparent" />
-          <input type='email' placeholder='Email'
-            class="w-full rounded-md py-3 px-4 bg-gray-100 text-gray-800 text-sm outline-black focus:bg-transparent" />
-          <input type='text' placeholder='Subject'
-            class="w-full rounded-md py-3 px-4 bg-gray-100 text-gray-800 text-sm outline-black focus:bg-transparent" />
-          <textarea placeholder='Message' rows="6"
-            class="w-full rounded-md px-4 bg-gray-100 text-gray-800 text-sm pt-3 outline-black focus:bg-transparent"></textarea>
-          <button type='button'
-            class="text-white bg-black hover:bg-gray-900 tracking-wide rounded-md text-sm px-4 py-3 w-full !mt-6">Send</button>
-        </form>
+        <EmailFormComponent />
       </div></div>
     </div>
   )
