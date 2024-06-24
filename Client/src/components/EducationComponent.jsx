@@ -2,7 +2,7 @@ import React from 'react'
 
 function EducationComponent() {
   return (
-    <div className="container mx-auto px-4">
+    <div className="mx-auto px-4">
       <div>
         <p className="text-6xl font-semibold text-gray-900 text-center mb-10 mt-20">Education</p>
       </div>
