@@ -2,6 +2,7 @@
 
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import React from 'react';
+import GithubButton from './GithubButton';
 
 function Card({ title, imageUrl, description, buttonText, tech,status,url }) {
     return (
@@ -19,9 +20,7 @@ function Card({ title, imageUrl, description, buttonText, tech,status,url }) {
                     </div>
                 ))}
             </div>
-            <a href={url} className="w-36 sm:w-auto mt-4 bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg inline-flex items-end justify-end px-4 py-2.5 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
-                {buttonText}
-            </a>
+            <GithubButton url={url}/>
         </div>
     );
 }
