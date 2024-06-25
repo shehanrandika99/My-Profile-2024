@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
-// always use state variables beacuse we want save user input data
+
 const EmailFormComponent = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -10,23 +10,23 @@ const EmailFormComponent = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-// Add template data always add 2 template one of for reciver and another is sender 
+
         const serviceId = 'service_wgvn66d';
         const templateId = 'hello';
         const noReplyTemplateId = 'bye'; 
         const publicKey = 'RdFBPFPpk3FnM5GFb';
-// These templates params are same in email js params if is not same comes runtime errors (error code 422)
+
         const templateParams = {
             from_name: name,
             from_email: email,
             to_name: 'Shehan Randika',
-            message: subject,
+            subject: subject,  // Changed key from 'message' to 'subject'
             message: text,
             user_email: email
         };
-// print in user input params
+
         console.log('Sending email with params:', templateParams);
-// use try catch exsption for find out errors
+
         try {
             const response = await emailjs.send(serviceId, templateId, templateParams, publicKey);
             console.log('Email sent successfully:', response.status, response.text);
@@ -36,10 +36,9 @@ const EmailFormComponent = () => {
             setSubject('');
             setText('');
 
-            // Send no-reply email to the user
             const noReplyParams = {
                 user_email: email,
-                to_name: name || 'Recipient', // Set a default value if name is empty
+                to_name: name || 'Recipient',
                 message: 'Thank you for contacting us. This is a no-reply message.'
             };
 
