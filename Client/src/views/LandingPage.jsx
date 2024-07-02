@@ -12,6 +12,7 @@ import EducationComponent from '../components/EducationComponent';
 import ExperiencesComponent from '../components/ExperiencesComponent';
 import FooterComponent from '../components/FooterComponent';
 
+
 function LandingPage() {
     const [position, setPosition] = useState({ x: 0, y: 0 });
 
